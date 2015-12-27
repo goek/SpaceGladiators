@@ -7,6 +7,9 @@ import com.skyking.spacegladiator.MyGdxGame;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new MyGdxGame(), config);
+        config.width=800;
+        config.height=480;
+
+        new LwjglApplication(new MyGdxGame(), config);
 	}
 }

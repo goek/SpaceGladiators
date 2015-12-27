@@ -1,0 +1,47 @@
+
+dest_runToIdle.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+runToIdle
+  rotate: false
+  xy: 1, 506
+  size: 271, 503
+  orig: 271, 503
+  offset: 0, 0
+  index: 0
+runToIdle
+  rotate: false
+  xy: 1, 1
+  size: 271, 503
+  orig: 271, 503
+  offset: 0, 0
+  index: 1
+runToIdle
+  rotate: false
+  xy: 274, 506
+  size: 271, 503
+  orig: 271, 503
+  offset: 0, 0
+  index: 2
+runToIdle
+  rotate: false
+  xy: 274, 1
+  size: 271, 503
+  orig: 271, 503
+  offset: 0, 0
+  index: 3
+runToIdle
+  rotate: false
+  xy: 547, 506
+  size: 271, 503
+  orig: 271, 503
+  offset: 0, 0
+  index: 4
+runToIdle
+  rotate: false
+  xy: 547, 1
+  size: 271, 503
+  orig: 271, 503
+  offset: 0, 0
+  index: 5
