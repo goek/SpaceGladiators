@@ -1,4 +1,4 @@
-package com.skyking.spacegladiator;
+package com.skyking.spacegladiator.util;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 

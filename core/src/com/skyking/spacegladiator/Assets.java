@@ -1,6 +1,7 @@
 package com.skyking.spacegladiator;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 /**
@@ -16,6 +17,10 @@ public class Assets {
     public static final TextureAtlas destRunToIdleAtlas = new TextureAtlas(Gdx.files.internal("img/anim/dest/dest_runToIdle.atlas"));
 
 
+    // Parallax Test
+    public static final Texture layer1 = new Texture(Gdx.files.internal("img/parallax/test/layer1.png"));
+    public static final Texture layer2 = new Texture(Gdx.files.internal("img/parallax/test/layer2.png"));
+    public static final Texture layer3 = new Texture(Gdx.files.internal("img/parallax/test/layer3.png"));
 
     public static void dispose() {
         destDispose();
