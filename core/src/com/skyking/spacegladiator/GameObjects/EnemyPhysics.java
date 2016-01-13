@@ -50,7 +50,7 @@ public class EnemyPhysics {
         fixtureMap = new ObjectMap<FixtureNames, Fixture>();
 
         float feetRadius = enemy.getWidth()/2 * adjustWidthPercentage;
-        Vector2 feetDisplacement = new Vector2(enemy.getPosition().x, - ((enemy.getHeight() / 2) - feetRadius));
+        Vector2 feetDisplacement = new Vector2(0, - ((enemy.getHeight() / 2) - feetRadius));
         feetShape = new CircleShape();
         feetShape.setRadius(feetRadius);
         feetShape.setPosition(feetDisplacement);
@@ -58,14 +58,14 @@ public class EnemyPhysics {
         feetFixtureDef.shape = feetShape;
         feetFixtureDef.isSensor = true;
 
-        Vector2 bodyDisplacement = new Vector2(enemy.getPosition().x, feetRadius / 2);
+        Vector2 bodyDisplacement = new Vector2(0, feetRadius / 2);
         playerBodyShape = new PolygonShape();
         playerBodyShape.setAsBox(enemy.getWidth() / 2 * adjustWidthPercentage, (enemy.getHeight() - feetRadius) / 2, bodyDisplacement, 0);
         bodyFixtureDef = new FixtureDef();
         bodyFixtureDef.shape = playerBodyShape;
         bodyFixtureDef.isSensor = true;
 
-        Vector2 weaponDisplacement = new Vector2(enemy.getPosition().x, enemy.getHeight() / 25);
+        Vector2 weaponDisplacement = new Vector2(0, enemy.getHeight() / 25);
         weaponShape = new PolygonShape();
         weaponShape.setAsBox(enemy.getWidth() / 2 * adjustWidthPercentage, enemy.getHeight() / 16, weaponDisplacement, 0);
         weaponFixtureDef = new FixtureDef();

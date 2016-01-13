@@ -26,15 +26,15 @@ public class HeroDrawer {
         switch (hero.getState()) {
             case IDLE:
                 animationManager.play(Animations.IDLE, batch, idlePosition, hero.getWidth(), hero.getHeight()
-                        , (hero.getOrientation() == Hero.Orientation.RIGHT));
+                        , (hero.getOrientation() == Hero.Orientation.RIGHT), true);
                 break;
             case RUNNING:
                 animationManager.play(Animations.RUNNING, batch, runningPosition, runningWidth,  runningHeight
-                        , (hero.getOrientation() == Hero.Orientation.RIGHT));
+                        , (hero.getOrientation() == Hero.Orientation.RIGHT), true);
                 break;
             case ATTACK:
-                animationManager.play(Animations.IDLE, batch, idlePosition, hero.getWidth(), hero.getHeight()
-                        , (hero.getOrientation() == Hero.Orientation.RIGHT));
+                animationManager.play(Animations.ATTACK, batch, attackPosition, attackWidth, attackHeight
+                        , (hero.getOrientation() == Hero.Orientation.RIGHT), false);
                 break;
         }
     }
@@ -42,17 +42,19 @@ public class HeroDrawer {
     private void initAnimations() {
         float ratioW = Assets.destIdleAtlas.getRegions().first().getRotatedPackedWidth() / Hero.HeroConstants.WIDTH;
 
-        idlePosition = new Vector2(hero.getPosition().x - hero.getWidth() / 2,
-                                     hero.getPosition().y - hero.getHeight() / 2);
+        idlePosition = new Vector2(0, 0);
 
         runningWidth = Assets.destRunAtlas.getRegions().first().getRotatedPackedWidth() / ratioW;
         runningHeight = Assets.destRunAtlas.getRegions().first().getRotatedPackedHeight() / ratioW;
+        runningPosition = new Vector2(0, 0);
 
-        runningPosition = new Vector2(hero.getPosition().x - runningWidth/2,
-                                        hero.getPosition().y - runningHeight/2);
+        attackWidth = Assets.destPunchAtlas.getRegions().first().getRotatedPackedWidth() / ratioW;
+        attackHeight = Assets.destPunchAtlas.getRegions().first().getRotatedPackedHeight() / ratioW;
+        attackPosition = new Vector2(0, 0);
 
         animationManager.add(Animations.IDLE, new Animation(1/60f, Assets.destIdleAtlas.getRegions()));
-        animationManager.add(Animations.RUNNING, new Animation(1/50f, Assets.destRunAtlas.getRegions()));
+        animationManager.add(Animations.RUNNING, new Animation(1/65f, Assets.destRunAtlas.getRegions()));
+        animationManager.add(Animations.ATTACK, new Animation(1/50f, Assets.destPunchAtlas.getRegions()));
     }
 
 
@@ -60,8 +62,14 @@ public class HeroDrawer {
         idlePosition.set(hero.getPosition().x - hero.getWidth() / 2,
                 hero.getPosition().y - hero.getHeight() / 2);
 
-        runningPosition.set(hero.getPosition().x - runningWidth/2,
-                                hero.getPosition().y - runningHeight/2);
+        runningPosition.set(hero.getPosition().x - runningWidth / 2,
+                                hero.getPosition().y - runningHeight / 2);
+
+        float attacDisplacementX = ( hero.getOrientation() == Hero.Orientation.RIGHT ) ?
+                                                        attackWidth * 0.23f : -attackWidth * 0.23f;
+
+        attackPosition.set(hero.getPosition().x - attackWidth / 2  + attacDisplacementX
+                         , hero.getPosition().y - attackHeight / 2);
     }
 
 

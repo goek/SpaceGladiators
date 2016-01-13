@@ -8,4 +8,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class GlobalTools {
     public static final SpriteBatch batch = new SpriteBatch();
 
+    public static void dispose(){
+        batch.dispose();
+    }
+
 }

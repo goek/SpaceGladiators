@@ -14,12 +14,14 @@ public class Enemy extends Entity2D {
     public enum State{IDLE, RUNNING, ATTACK};
     private State state = State.IDLE;
 
+    private int health = 150;
+
     public enum Orientation{LEFT, RIGHT;};
     private Orientation orientation = Orientation.LEFT;
 
-    public Enemy(World world){
+    public Enemy(World world, float spawnX, float spawnY){
         super();
-        setPosition(getPosition().x - 10f, getPosition().y);
+        setPosition(spawnX, spawnY);
         setSize(Hero.HeroConstants.WIDTH, Hero.HeroConstants.HEIGHT);
         this.world = world;
         enemyPhysics = new EnemyPhysics(this);
@@ -30,11 +32,17 @@ public class Enemy extends Entity2D {
 
     }
 
+
     @Override
     public void update() {
         setPosition(enemyPhysics.getPosition());
     }
 
+    public void gotHit(){
+        health -= 10;
+    }
+
+    /*  Getters and Setters */
     public World getWorld() {
         return world;
     }

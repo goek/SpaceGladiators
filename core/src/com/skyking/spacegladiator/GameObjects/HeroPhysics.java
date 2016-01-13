@@ -19,13 +19,14 @@ public class HeroPhysics {
     private BodyDef playerBodyDef, weaponBodyDef;
     private FixtureDef feetFixtureDef, bodyFixtureDef, weaponFixtureDef;
     private ObjectMap<FixtureNames, Fixture> fixtureMap;
-    public enum FixtureNames{FEET, BODY, WEAPON;};
+    public enum FixtureNames{FEET, BODY, WEAPON};
     private PolygonShape playerBodyShape, weaponShape;
     private CircleShape feetShape;
 
-    private float adjustWidthPercentage = 1;
+    private float adjustWidthPercentage = 1f;
     public enum Action{IDLE, ATTACK};
     private Action currentAction = Action.IDLE;
+    boolean isDescending = false;
 
     public HeroPhysics(Hero hero){
         this.hero = hero;
@@ -41,7 +42,6 @@ public class HeroPhysics {
         playerBodyDef = new BodyDef();
         playerBodyDef.type = BodyDef.BodyType.DynamicBody;
         playerBodyDef.position.set(hero.getPosition());
-        playerBodyDef.bullet = true;
 
         weaponBodyDef = new BodyDef();
         weaponBodyDef.type = BodyDef.BodyType.DynamicBody;
@@ -53,7 +53,7 @@ public class HeroPhysics {
 
         // FixtureDef for Feet
         float feetRadius = hero.getWidth()/2 * adjustWidthPercentage;
-        Vector2 feetDisplacement = new Vector2(hero.getPosition().x, - ((hero.getHeight() / 2) - feetRadius));
+        Vector2 feetDisplacement = new Vector2(0, - ((hero.getHeight() / 2) - feetRadius));
         feetShape = new CircleShape();
         feetShape.setRadius(feetRadius);
         feetShape.setPosition(feetDisplacement);
@@ -62,7 +62,7 @@ public class HeroPhysics {
         feetFixtureDef.isSensor = true;
 
         // Fixture for Body
-        Vector2 bodyDisplacement = new Vector2(hero.getPosition().x, feetRadius / 2);
+        Vector2 bodyDisplacement = new Vector2(0, feetRadius / 2);
         playerBodyShape = new PolygonShape();
         playerBodyShape.setAsBox(hero.getWidth() / 2 * adjustWidthPercentage, (hero.getHeight() - feetRadius) / 2, bodyDisplacement, 0);
         bodyFixtureDef = new FixtureDef();
@@ -70,7 +70,7 @@ public class HeroPhysics {
         bodyFixtureDef.isSensor = true;
 
         // Fixture for Weapon/Fist etc.
-        Vector2 weaponDisplacement = new Vector2(hero.getPosition().x, hero.getHeight() / 25);
+        Vector2 weaponDisplacement = new Vector2(0, hero.getHeight() / 25);
         weaponShape = new PolygonShape();
         weaponShape.setAsBox(hero.getWidth() / 2 * adjustWidthPercentage, hero.getHeight() / 16, weaponDisplacement, 0);
         weaponFixtureDef = new FixtureDef();
@@ -89,6 +89,8 @@ public class HeroPhysics {
         fixtureMap.put(FixtureNames.BODY, bodyFixture);
         fixtureMap.put(FixtureNames.FEET, feetFixture);
         fixtureMap.put(FixtureNames.WEAPON, weaponFixture);
+
+
     }
 
     public void update() {
@@ -111,6 +113,19 @@ public class HeroPhysics {
                     hero.setState(Hero.State.IDLE);             //Finishing attack, then go back to idle
                 }
                 break;
+            case JUMP:
+                if(!isDescending) {
+                    //applyForce(hero.jumpVelocity, Hero.HeroConstants.JUMPVELOCITY);
+                    Gdx.app.log("VELOCITY", String.valueOf(hero.jumpVelocity));
+                }
+                if (hero.getPosition().y >= hero.getHeight()){
+                    applyForce(hero.jumpVelocity, -Hero.HeroConstants.JUMPVELOCITY);
+                    isDescending = true;
+                }
+                if (Math.abs(hero.getPosition().y - -3f) < 0.0001){
+                    hero.stop();
+                }
+                break;
         }
 
 
@@ -130,6 +145,11 @@ public class HeroPhysics {
 
     }
 
+    public void applyForce(float x, float y){
+        playerBody.applyForceToCenter(x, y, false);
+        weaponBody.applyForceToCenter(x, y, false);
+    }
+
     public void useWeapon(){
         if(hero.getState() == Hero.State.ATTACK) return;
         switch (hero.getOrientation()) {
@@ -140,8 +160,9 @@ public class HeroPhysics {
                 weaponBody.setLinearVelocity(Hero.HeroConstants.PUNCHVELOCITY, 0);
                 break;
         }
-
     }
+
+
 
     public Vector2 getPosition(){
         return playerBody.getPosition();

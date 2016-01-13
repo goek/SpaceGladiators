@@ -1,0 +1,188 @@
+
+dest_run.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+run
+  rotate: false
+  xy: 1, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 0
+run
+  rotate: false
+  xy: 1, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 1
+run
+  rotate: false
+  xy: 276, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 2
+run
+  rotate: false
+  xy: 276, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 3
+run
+  rotate: false
+  xy: 551, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 4
+run
+  rotate: false
+  xy: 551, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 5
+
+dest_run2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+run
+  rotate: false
+  xy: 1, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 6
+run
+  rotate: false
+  xy: 1, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 7
+run
+  rotate: false
+  xy: 276, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 8
+run
+  rotate: false
+  xy: 276, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 9
+run
+  rotate: false
+  xy: 551, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 10
+run
+  rotate: false
+  xy: 551, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 11
+
+dest_run3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+run
+  rotate: false
+  xy: 1, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 12
+run
+  rotate: false
+  xy: 1, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 13
+run
+  rotate: false
+  xy: 276, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 14
+run
+  rotate: false
+  xy: 276, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 15
+run
+  rotate: false
+  xy: 551, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 16
+run
+  rotate: false
+  xy: 551, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 17
+
+dest_run4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+run
+  rotate: false
+  xy: 1, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 18
+run
+  rotate: false
+  xy: 1, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 19
+run
+  rotate: false
+  xy: 276, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 20
+run
+  rotate: false
+  xy: 276, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 21
+run
+  rotate: false
+  xy: 551, 498
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 22
+run
+  rotate: false
+  xy: 551, 1
+  size: 273, 495
+  orig: 273, 495
+  offset: 0, 0
+  index: 23

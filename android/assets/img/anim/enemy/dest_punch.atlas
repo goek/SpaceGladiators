@@ -1,0 +1,99 @@
+
+dest_punch.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+punch
+  rotate: false
+  xy: 1, 510
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 0
+punch
+  rotate: false
+  xy: 1, 1
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 1
+punch
+  rotate: false
+  xy: 389, 510
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 2
+punch
+  rotate: false
+  xy: 389, 1
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 3
+
+dest_punch2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+punch
+  rotate: false
+  xy: 1, 510
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 4
+punch
+  rotate: false
+  xy: 1, 1
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 5
+punch
+  rotate: false
+  xy: 389, 510
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 6
+punch
+  rotate: false
+  xy: 389, 1
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 7
+
+dest_punch3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+punch
+  rotate: false
+  xy: 1, 510
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 8
+punch
+  rotate: false
+  xy: 1, 1
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 9
+punch
+  rotate: false
+  xy: 389, 510
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 10
+punch
+  rotate: false
+  xy: 389, 1
+  size: 386, 507
+  orig: 386, 507
+  offset: 0, 0
+  index: 11

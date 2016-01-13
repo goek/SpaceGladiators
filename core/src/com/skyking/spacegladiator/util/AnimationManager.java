@@ -28,6 +28,8 @@ public class AnimationManager<Key> {
     public Animation getAnimation(Key key){
         return animationMap.get(key);
     }
+    boolean isPlayStart = true;
+    private Key currentKey;
 
     //has to be called in the render method with spriteBatch passed on
     public void play(Key key, SpriteBatch batch, Vector2 position, float width, float height){
@@ -40,7 +42,16 @@ public class AnimationManager<Key> {
 
     }
 
-    public void play(Key key, SpriteBatch batch, Vector2 position, float width, float height, boolean mirrorX){
+    public void play(Key key, SpriteBatch batch, Vector2 position, float width, float height, boolean mirrorX, boolean loop){
+        if (isPlayStart) {
+            currentKey = key;
+            isPlayStart = false;
+        }
+
+        if (currentKey != key) {
+            isPlayStart = true;
+            resetTime();
+        }
 
         time += Gdx.graphics.getDeltaTime();
 
@@ -48,7 +59,7 @@ public class AnimationManager<Key> {
         if(mirrorX && currentFrame.isFlipX()==false) currentFrame.flip(true, false);
         if(!mirrorX && currentFrame.isFlipX()==true) currentFrame.flip(true, false);
         batch.draw(currentFrame, position.x, position.y, width, height);
-        if (animationMap.get(key).isAnimationFinished(time)) resetTime();
+        if (animationMap.get(key).isAnimationFinished(time) && loop) resetTime();
 
     }
 
@@ -62,5 +73,4 @@ public class AnimationManager<Key> {
     private void resetTime(){
         time = 0;
     }
-
 }
