@@ -42,7 +42,8 @@ public class AnimationManager<Key> {
 
     }
 
-    public void play(Key key, SpriteBatch batch, Vector2 position, float width, float height, boolean mirrorX, boolean loop){
+    /* returns true if finished animation */
+    public boolean play(Key key, SpriteBatch batch, Vector2 position, float width, float height, boolean mirrorX, boolean loop){
         if (isPlayStart) {
             currentKey = key;
             isPlayStart = false;
@@ -59,8 +60,13 @@ public class AnimationManager<Key> {
         if(mirrorX && currentFrame.isFlipX()==false) currentFrame.flip(true, false);
         if(!mirrorX && currentFrame.isFlipX()==true) currentFrame.flip(true, false);
         batch.draw(currentFrame, position.x, position.y, width, height);
-        if (animationMap.get(key).isAnimationFinished(time) && loop) resetTime();
 
+        if (animationMap.get(key).isAnimationFinished(time)) {
+            if(loop) resetTime();
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public void flipAnimation(Key key, boolean x, boolean y){

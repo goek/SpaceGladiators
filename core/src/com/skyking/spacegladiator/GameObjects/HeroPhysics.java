@@ -19,12 +19,16 @@ public class HeroPhysics {
     private BodyDef playerBodyDef, weaponBodyDef;
     private FixtureDef feetFixtureDef, bodyFixtureDef, weaponFixtureDef;
     private ObjectMap<FixtureNames, Fixture> fixtureMap;
-    public enum FixtureNames{FEET, BODY, WEAPON};
+
+
+
+    public enum FixtureNames{FEET, BODY, WEAPON;};
     private PolygonShape playerBodyShape, weaponShape;
     private CircleShape feetShape;
+    private float adjustWidthPercentage = 0.8f;
 
-    private float adjustWidthPercentage = 1f;
-    public enum Action{IDLE, ATTACK};
+
+    public enum Action{IDLE, ATTACK;};
     private Action currentAction = Action.IDLE;
     boolean isDescending = false;
 
@@ -72,7 +76,7 @@ public class HeroPhysics {
         // Fixture for Weapon/Fist etc.
         Vector2 weaponDisplacement = new Vector2(0, hero.getHeight() / 25);
         weaponShape = new PolygonShape();
-        weaponShape.setAsBox(hero.getWidth() / 2 * adjustWidthPercentage, hero.getHeight() / 16, weaponDisplacement, 0);
+        weaponShape.setAsBox(hero.getWidth() / 2 * adjustWidthPercentage * 0.5f, hero.getHeight() / 16, weaponDisplacement, 0);
         weaponFixtureDef = new FixtureDef();
         weaponFixtureDef.shape = weaponShape;
         weaponFixtureDef.isSensor = true;
@@ -97,18 +101,18 @@ public class HeroPhysics {
 
         switch (hero.getState()) {
             case ATTACK:
-                if (Math.abs(weaponBody.getPosition().x - hero.getPosition().x) >= hero.getWidth()){
+                if (Math.abs(weaponBody.getPosition().x - hero.getPosition().x) >= hero.getWidth() *1.1f){
                     switch (hero.getOrientation()) {
                         case LEFT:
-                            weaponBody.setLinearVelocity(Hero.HeroConstants.PUNCHVELOCITY, 0);
+                            weaponBody.setLinearVelocity(Hero.Constants.PUNCHVELOCITY, 0);
                             break;
                         case RIGHT:
-                            weaponBody.setLinearVelocity( - Hero.HeroConstants.PUNCHVELOCITY, 0);
+                            weaponBody.setLinearVelocity( - Hero.Constants.PUNCHVELOCITY, 0);
                             break;
                     }
                 }
 
-                if (Math.abs(weaponBody.getPosition().x - hero.getPosition().x) < 0.0001){
+                if (Math.abs(weaponBody.getPosition().x - hero.getPosition().x) < 0.0001f){
                     weaponBody.setLinearVelocity(0, 0);
                     hero.setState(Hero.State.IDLE);             //Finishing attack, then go back to idle
                 }
@@ -119,7 +123,7 @@ public class HeroPhysics {
                     Gdx.app.log("VELOCITY", String.valueOf(hero.jumpVelocity));
                 }
                 if (hero.getPosition().y >= hero.getHeight()){
-                    applyForce(hero.jumpVelocity, -Hero.HeroConstants.JUMPVELOCITY);
+                    applyForce(hero.jumpVelocity, -Hero.Constants.JUMPVELOCITY);
                     isDescending = true;
                 }
                 if (Math.abs(hero.getPosition().y - -3f) < 0.0001){
@@ -145,6 +149,11 @@ public class HeroPhysics {
 
     }
 
+    public void setPosition(Vector2 position) {
+        playerBody.getPosition().set(position);
+        weaponBody.getPosition().set(hero.getPosition().x, hero.getPosition().y + hero.getHeight() / 6f);
+    }
+
     public void applyForce(float x, float y){
         playerBody.applyForceToCenter(x, y, false);
         weaponBody.applyForceToCenter(x, y, false);
@@ -154,10 +163,10 @@ public class HeroPhysics {
         if(hero.getState() == Hero.State.ATTACK) return;
         switch (hero.getOrientation()) {
             case LEFT:
-                weaponBody.setLinearVelocity( - Hero.HeroConstants.PUNCHVELOCITY, 0);
+                weaponBody.setLinearVelocity( - Hero.Constants.PUNCHVELOCITY, 0);
                 break;
             case RIGHT:
-                weaponBody.setLinearVelocity(Hero.HeroConstants.PUNCHVELOCITY, 0);
+                weaponBody.setLinearVelocity(Hero.Constants.PUNCHVELOCITY, 0);
                 break;
         }
     }

@@ -18,14 +18,17 @@ public class EnemyPhysics {
     private BodyDef playerBodyDef, weaponBodyDef;
     private FixtureDef feetFixtureDef, bodyFixtureDef, weaponFixtureDef;
     private ObjectMap<FixtureNames, Fixture> fixtureMap;
+
     public enum FixtureNames{FEET, BODY, WEAPON;};
+
     private PolygonShape playerBodyShape, weaponShape;
     private CircleShape feetShape;
+    private float adjustWidthPercentage = 0.8f;
 
-    private float adjustWidthPercentage = 1;
-    public enum Action{IDLE, ATTACK};
+    public static final float WEAPONRANGE = Hero.Constants.WIDTH * 1.1f;
+
+    public enum Action{IDLE, ATTACK;};
     private Action currentAction = Action.IDLE;
-
     public EnemyPhysics(Enemy enemy){
         this.enemy = enemy;
 
@@ -67,7 +70,7 @@ public class EnemyPhysics {
 
         Vector2 weaponDisplacement = new Vector2(0, enemy.getHeight() / 25);
         weaponShape = new PolygonShape();
-        weaponShape.setAsBox(enemy.getWidth() / 2 * adjustWidthPercentage, enemy.getHeight() / 16, weaponDisplacement, 0);
+        weaponShape.setAsBox(enemy.getWidth() / 2 * adjustWidthPercentage * 0.5f, enemy.getHeight() / 16, weaponDisplacement, 0);
         weaponFixtureDef = new FixtureDef();
         weaponFixtureDef.shape = weaponShape;
         weaponFixtureDef.isSensor = true;
@@ -91,18 +94,18 @@ public class EnemyPhysics {
 
         switch (enemy.getState()) {
             case ATTACK:
-                if (Math.abs(weaponBody.getPosition().x - enemy.getPosition().x) >= enemy.getWidth()){
+                if (Math.abs(weaponBody.getPosition().x - enemy.getPosition().x) >= WEAPONRANGE){
                     switch (enemy.getOrientation()) {
                         case LEFT:
-                            weaponBody.setLinearVelocity(Hero.HeroConstants.PUNCHVELOCITY, 0);
+                            weaponBody.setLinearVelocity(Hero.Constants.PUNCHVELOCITY, 0);
                             break;
                         case RIGHT:
-                            weaponBody.setLinearVelocity( - Hero.HeroConstants.PUNCHVELOCITY, 0);
+                            weaponBody.setLinearVelocity( - Hero.Constants.PUNCHVELOCITY, 0);
                             break;
                     }
 
                 }
-                if (Math.abs(weaponBody.getPosition().x - enemy.getPosition().x) < 0.0001){
+                if (Math.abs(weaponBody.getPosition().x - enemy.getPosition().x) < 0.00001f){
                     weaponBody.setLinearVelocity(0, 0);
 
                     enemy.setState(Enemy.State.IDLE);             //Finishing attack, then go back to idle
@@ -127,14 +130,19 @@ public class EnemyPhysics {
 
     }
 
+    public void setPosition(Vector2 position) {
+        playerBody.getPosition().set(position);
+        weaponBody.getPosition().set(enemy.getPosition().x, enemy.getPosition().y + enemy.getHeight() / 6f);
+    }
+
     public void useWeapon(){
         if(enemy.getState() == Enemy.State.ATTACK) return;
         switch (enemy.getOrientation()) {
             case LEFT:
-                weaponBody.setLinearVelocity( - Hero.HeroConstants.PUNCHVELOCITY, 0);
+                weaponBody.setLinearVelocity( - Hero.Constants.PUNCHVELOCITY, 0);
                 break;
             case RIGHT:
-                weaponBody.setLinearVelocity(Hero.HeroConstants.PUNCHVELOCITY, 0);
+                weaponBody.setLinearVelocity(Hero.Constants.PUNCHVELOCITY, 0);
                 break;
         }
 

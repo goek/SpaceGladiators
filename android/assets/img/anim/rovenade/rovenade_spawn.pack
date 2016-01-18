@@ -1,0 +1,230 @@
+
+rovenade_spawn.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+spawn
+  rotate: false
+  xy: 1, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 0
+spawn
+  rotate: false
+  xy: 1, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 1
+spawn
+  rotate: false
+  xy: 235, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 2
+spawn
+  rotate: false
+  xy: 235, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 3
+spawn
+  rotate: false
+  xy: 469, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 4
+spawn
+  rotate: false
+  xy: 469, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 5
+spawn
+  rotate: false
+  xy: 469, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 15
+spawn
+  rotate: false
+  xy: 703, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 6
+spawn
+  rotate: false
+  xy: 703, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 7
+
+rovenade_spawn2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+spawn
+  rotate: false
+  xy: 1, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 8
+spawn
+  rotate: false
+  xy: 1, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 9
+spawn
+  rotate: false
+  xy: 235, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 10
+spawn
+  rotate: false
+  xy: 235, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 11
+spawn
+  rotate: false
+  xy: 469, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 12
+spawn
+  rotate: false
+  xy: 469, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 13
+spawn
+  rotate: false
+  xy: 703, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 14
+spawn
+  rotate: false
+  xy: 703, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 16
+
+rovenade_spawn3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+spawn
+  rotate: false
+  xy: 1, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 17
+spawn
+  rotate: false
+  xy: 1, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 18
+spawn
+  rotate: false
+  xy: 235, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 19
+spawn
+  rotate: false
+  xy: 235, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 20
+spawn
+  rotate: false
+  xy: 469, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 21
+spawn
+  rotate: false
+  xy: 469, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 22
+spawn
+  rotate: false
+  xy: 703, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 23
+spawn
+  rotate: false
+  xy: 703, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 24
+
+rovenade_spawn4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+spawn
+  rotate: false
+  xy: 1, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 25
+spawn
+  rotate: false
+  xy: 1, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 26
+spawn
+  rotate: false
+  xy: 235, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 27
+spawn
+  rotate: false
+  xy: 235, 1
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 28
+spawn
+  rotate: false
+  xy: 469, 432
+  size: 232, 429
+  orig: 232, 429
+  offset: 0, 0
+  index: 29

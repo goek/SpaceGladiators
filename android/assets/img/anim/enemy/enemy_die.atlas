@@ -1,0 +1,178 @@
+
+enemy_die.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+idle
+  rotate: false
+  xy: 1, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 0
+idle
+  rotate: false
+  xy: 1, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 1
+idle
+  rotate: false
+  xy: 171, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 2
+idle
+  rotate: false
+  xy: 171, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 3
+idle
+  rotate: false
+  xy: 341, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 4
+idle
+  rotate: false
+  xy: 341, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 5
+idle
+  rotate: false
+  xy: 511, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 6
+idle
+  rotate: false
+  xy: 511, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 7
+idle
+  rotate: false
+  xy: 681, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 8
+idle
+  rotate: false
+  xy: 681, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 9
+idle
+  rotate: false
+  xy: 851, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 10
+idle
+  rotate: false
+  xy: 851, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 11
+
+enemy_die2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+idle
+  rotate: false
+  xy: 1, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 12
+idle
+  rotate: false
+  xy: 1, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 13
+idle
+  rotate: false
+  xy: 171, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 14
+idle
+  rotate: false
+  xy: 171, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 15
+idle
+  rotate: false
+  xy: 341, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 16
+idle
+  rotate: false
+  xy: 341, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 17
+idle
+  rotate: false
+  xy: 511, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 18
+idle
+  rotate: false
+  xy: 511, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 19
+idle
+  rotate: false
+  xy: 681, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 20
+idle
+  rotate: false
+  xy: 681, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 21
+idle
+  rotate: false
+  xy: 851, 506
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 22
+idle
+  rotate: false
+  xy: 851, 1
+  size: 168, 503
+  orig: 168, 503
+  offset: 0, 0
+  index: 23

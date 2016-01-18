@@ -34,6 +34,9 @@ public class HeroInput extends InputAdapter {
             case Input.Keys.SPACE:
                 //hero.jump();
                 break;
+            case Input.Keys.C:
+                hero.useRovenade();
+                break;
             case Input.Keys.BACK:
                 Gdx.app.exit();
                 break;
@@ -67,9 +70,9 @@ public class HeroInput extends InputAdapter {
                 hero.run(Hero.Orientation.RIGHT);
             }
             if (hero.getState() == Hero.State.JUMP && Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
-                hero.jumpVelocity = -Hero.HeroConstants.JUMPVELOCITY;
+                hero.jumpVelocity = -Hero.Constants.JUMPVELOCITY;
             } else if (hero.getState() == Hero.State.JUMP && Gdx.input.isKeyPressed(Input.Keys.RIGHT)) {
-                hero.jumpVelocity = Hero.HeroConstants.JUMPVELOCITY;
+                hero.jumpVelocity = Hero.Constants.JUMPVELOCITY;
             } else {
                 hero.jumpVelocity = 0;
             }

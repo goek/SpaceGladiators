@@ -1,0 +1,308 @@
+
+rovenade_drive.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+drive
+  rotate: false
+  xy: 1, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 0
+drive
+  rotate: false
+  xy: 1, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 1
+drive
+  rotate: false
+  xy: 322, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 2
+drive
+  rotate: false
+  xy: 322, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 3
+drive
+  rotate: false
+  xy: 643, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 4
+drive
+  rotate: false
+  xy: 643, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 5
+
+rovenade_drive2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+drive
+  rotate: false
+  xy: 1, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 6
+drive
+  rotate: false
+  xy: 1, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 7
+drive
+  rotate: false
+  xy: 322, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 8
+drive
+  rotate: false
+  xy: 322, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 9
+drive
+  rotate: false
+  xy: 643, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 10
+drive
+  rotate: false
+  xy: 643, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 11
+
+rovenade_drive3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+drive
+  rotate: false
+  xy: 1, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 12
+drive
+  rotate: false
+  xy: 1, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 13
+drive
+  rotate: false
+  xy: 322, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 14
+drive
+  rotate: false
+  xy: 322, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 15
+drive
+  rotate: false
+  xy: 643, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 16
+drive
+  rotate: false
+  xy: 643, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 17
+
+rovenade_drive4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+drive
+  rotate: false
+  xy: 1, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 18
+drive
+  rotate: false
+  xy: 1, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 19
+drive
+  rotate: false
+  xy: 322, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 20
+drive
+  rotate: false
+  xy: 322, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 21
+drive
+  rotate: false
+  xy: 643, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 22
+drive
+  rotate: false
+  xy: 643, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 23
+
+rovenade_drive5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+drive
+  rotate: false
+  xy: 1, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 24
+drive
+  rotate: false
+  xy: 1, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 25
+drive
+  rotate: false
+  xy: 322, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 26
+drive
+  rotate: false
+  xy: 322, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 27
+drive
+  rotate: false
+  xy: 643, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 28
+drive
+  rotate: false
+  xy: 643, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 29
+
+rovenade_drive6.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+drive
+  rotate: false
+  xy: 1, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 30
+drive
+  rotate: false
+  xy: 1, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 31
+drive
+  rotate: false
+  xy: 322, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 32
+drive
+  rotate: false
+  xy: 322, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 33
+drive
+  rotate: false
+  xy: 643, 378
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 34
+drive
+  rotate: false
+  xy: 643, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 35
+
+rovenade_drive7.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+drive
+  rotate: false
+  xy: 1, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 36
+drive
+  rotate: false
+  xy: 322, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 37
+drive
+  rotate: false
+  xy: 643, 1
+  size: 319, 375
+  orig: 319, 375
+  offset: 0, 0
+  index: 38

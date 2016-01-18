@@ -5,10 +5,11 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.skyking.spacegladiator.screens.ArenaScreen;
-import com.skyking.spacegladiator.util.GlobalTools;
+import com.skyking.spacegladiator.screens.IntroScreen;
+import com.skyking.spacegladiator.util.Tools;
 
 public class MyGdxGame extends Game {
-    private ArenaScreen arena;
+    private IntroScreen intro;
 
 	@Override
 	public void create () {
@@ -17,8 +18,8 @@ public class MyGdxGame extends Game {
 
             texture.setFilter(Texture.TextureFilter.Nearest, Texture.TextureFilter.Nearest);
         }
-        arena = new ArenaScreen();
-        setScreen(arena);
+        intro = new IntroScreen(this);
+        setScreen(intro);
 	}
 
 	@Override
@@ -32,8 +33,8 @@ public class MyGdxGame extends Game {
     public void dispose() {
         super.dispose();
         Assets.dispose();
-        arena.dispose();
-        GlobalTools.dispose();
+        intro.dispose();
+        Tools.dispose();
 
     }
 }
